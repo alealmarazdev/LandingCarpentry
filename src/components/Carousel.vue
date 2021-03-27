@@ -19,24 +19,49 @@
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
       <b-carousel-slide>
         <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="../assets/bg.jpg"
-            alt="image slot"
-          >
+          <div class="bg-img working">
+            <div class="box-container title">
+              <h3 class="text-uppercase">
+                we are available
+              </h3>
+            </div>
+            <div class="box-container subtitle">
+              <h3 class="text-uppercase text-white">
+                for your wooden work
+              </h3>
+            </div>
+            <div class="box-container list">
+              <ul class="list" style="">
+                  <li class="li-carousel">
+                    <a href="#" class="li-item" >Domestic</a></li>
+                  <li class="li-carousel">
+                    <a href="#" class="li-item" >Commercial</a>
+                  </li>
+                  <li class="li-carousel">
+                    <a href="#" class="li-item" style="">Industrial</a>
+                  </li>
+              </ul>
+            </div>
+            <div class="box-container phrase">
+              <p class="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                 do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam exercitation.
+
+              </p>
+            </div>
+            <div class="box-container button">
+              <button class="text-uppercase text-white">
+                PUrchase now
+              </button>
+            </div>
+          </div>
         </template>
       </b-carousel-slide>
       <b-carousel-slide>
         <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="../assets/coworkers.jpg"
-            alt="image slot"
-          >
+          <div class="bg-img teamwork">
+          </div>
         </template>
       </b-carousel-slide>
      <!-- Text slides with image -->
@@ -88,5 +113,89 @@
   }
 </script>
 <style scoped>
+  .bg-img {
+    height: 828px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  .working{
+    background-image: url('../assets/bg.jpg');
+  }
+  .teamwork{
+    background-image: url('../assets/coworkers.jpg');
+  }
 
+.box-container {
+  position: absolute;
+  visibility: visible;
+  z-index: 1;
+   left: 135px;
+}
+.title{
+    top: 255px;
+}
+.subtitle{
+    top: 310px;
+}
+.list{
+  top: 375px;
+}
+.phrase{
+    top: 430px;
+}
+.button{
+    top: 550px;
+}
+  ul {
+
+    background: #251606;
+}
+ul li {
+    display: inline-block;
+    position: relative;
+}
+ul li:after {
+    content: '|';
+    width: 1px !important;
+    height: 15px;
+    position: absolute;
+    top: 24%;
+    bottom: 0;
+    right: 0;
+    bottom: 0;
+    font: 500 14px/14px "Raleway", sans-serif !important;
+    color: #fff;
+}
+  .list{
+    transition: none 0s ease 0s;
+    line-height: 20px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .li-carousel{
+    transition: none 0s ease 0s;
+    line-height: 20px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 14px;
+
+  }
+  .li-item{
+    transition: none 0s ease 0s;
+    line-height: 40px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 1px 30px 1px 25px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 20px;
+  }
 </style>
