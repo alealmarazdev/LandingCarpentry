@@ -14,9 +14,6 @@
       @sliding-end="onSlideEnd"
     >
 
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
       <b-carousel-slide>
         <template #img>
           <div class="bg-img working">
@@ -33,27 +30,33 @@
             <div class="box-container list">
               <ul class="list" style="">
                   <li class="li-carousel">
-                    <a href="#" class="li-item" >Domestic</a></li>
+                    <a href="#" class="li-item line text-decoration-none text-white" >Domestic</a></li>
                   <li class="li-carousel">
-                    <a href="#" class="li-item" >Commercial</a>
+                    <a href="#" class="li-item line text-decoration-none text-white" >Commercial</a>
                   </li>
                   <li class="li-carousel">
-                    <a href="#" class="li-item" style="">Industrial</a>
+                    <a href="#" class="li-item text-decoration-none text-white" style="">Industrial</a>
                   </li>
               </ul>
             </div>
             <div class="box-container phrase">
-              <p class="text-white">
+              <p class="text-white w-50">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                  do eiusmod tempor incididunt ut labore et dolore magna
                   aliqua. Ut enim ad minim veniam exercitation.
 
               </p>
             </div>
-            <div class="box-container button">
-              <button class="text-uppercase text-white">
-                PUrchase now
+            <div class="box-container form w-50 d-flex justify-content-around">
+
+              <button class="text-uppercase bg-transparent px-4">
+               <a href="#" class="text-decoration-none text-white" >PUrchase now </a>
               </button>
+
+              <button class="text-uppercase bg-transparent px-4">
+               <a href="#" class="text-decoration-none text-white" >our services  </a>
+              </button>
+
             </div>
           </div>
         </template>
@@ -61,36 +64,33 @@
       <b-carousel-slide>
         <template #img>
           <div class="bg-img teamwork">
+            <div class="box-wrapper title">
+              <h3 class="text-uppercase">
+                Design futniture
+              </h3>
+            </div>
+            <div class="box-wrapper subtitle">
+              <h3 class="text-uppercase text-white">
+                make doors
+              </h3>
+            </div>
+            <div class="box-wrapper list">
+              <ul class="list" style="">
+                  <li class="li-carousel">
+                    <a href="#" class="li-item line text-decoration-none text-white" >Domestic</a></li>
+                  <li class="li-carousel">
+                    <a href="#" class="li-item line text-decoration-none text-white" >Commercial</a>
+                  </li>
+                  <li class="li-carousel">
+                    <a href="#" class="li-item text-decoration-none text-white" style="">Industrial</a>
+                  </li>
+              </ul>
+            </div>
           </div>
         </template>
       </b-carousel-slide>
-     <!-- Text slides with image -->
-      <!-- <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://picsum.photos/1024/480/?image=52"
-      ></b-carousel-slide> -->
 
-      <!-- Slides with custom text -->
-      <!-- <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-    -->
-      <!-- Slides with image only -->
-      <!-- <b-carousel-slide img-src="../assets/bg.jpg"></b-carousel-slide> -->
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <!-- <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide> -->
     </b-carousel>
-
-   <!--  <p class="mt-4">
-      Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
-    </p> -->
   </div>
 </template>
 
@@ -113,6 +113,13 @@
   }
 </script>
 <style scoped>
+ h3{
+   font: 800 50px/50px "Raleway", sans-serif !important;
+    color: #ca8e3e;
+    text-transform: uppercase;
+    letter-spacing: 0.3px !important;
+
+ }
   .bg-img {
     height: 828px;
     background-repeat: no-repeat;
@@ -132,6 +139,13 @@
   z-index: 1;
    left: 135px;
 }
+
+.box-wrapper{
+position: absolute;
+  visibility: visible;
+  z-index: 1;
+   left: 755px;
+}
 .title{
     top: 255px;
 }
@@ -144,8 +158,16 @@
 .phrase{
     top: 430px;
 }
-.button{
+.form{
     top: 550px;
+}
+button:hover {
+   background: #bb793c !important;
+
+}
+button a:hover {
+   background: #bb793c !important;
+   color: black !important
 }
   ul {
 
@@ -155,7 +177,7 @@ ul li {
     display: inline-block;
     position: relative;
 }
-ul li:after {
+.line:after {
     content: '|';
     width: 1px !important;
     height: 15px;
